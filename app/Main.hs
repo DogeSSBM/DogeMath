@@ -1,6 +1,10 @@
 module Main where
 
-import Lib
+import System.IO
 
 main :: IO ()
-main = someFunc
+main = do
+    putStr "> "
+    hFlush stdout
+    input <- getLine
+    putStrLn $ "\ninput: " ++ input
